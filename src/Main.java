@@ -2,24 +2,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void solveProblem(BaseProblemIfc baseProblemIfc, List<BaseProblemIfc> problemList) {
         String result;
 
-        List<BaseProblem> problems = new ArrayList<>();
+        result = baseProblemIfc.solve();
+        baseProblemIfc.setResult(result);
+        problemList.add(baseProblemIfc);
+    }
 
-        MultiplesOfThreeOrFive multiplesOfThreeOrFive = new MultiplesOfThreeOrFive();
-        result = multiplesOfThreeOrFive.solve();
-        multiplesOfThreeOrFive.setResult(result);
-        problems.add(multiplesOfThreeOrFive);
+    public static void main(String[] args) {
+        List<BaseProblemIfc> problems = new ArrayList<>();
 
-        EvenFibonacciNumbers evenFibonacciNumbers = new EvenFibonacciNumbers();
-        result = evenFibonacciNumbers.solve();
-        evenFibonacciNumbers.setResult(result);
-        problems.add(evenFibonacciNumbers);
+        solveProblem(new MultiplesOfThreeOrFive(), problems);
+        solveProblem(new EvenFibonacciNumbers(), problems);
+        solveProblem(new LargestPrimeFactor(), problems);
 
         System.out.println();
 
-        for (BaseProblem problem : problems) {
+        for (BaseProblemIfc problem : problems) {
             System.out.println(problem.getProblemNumber() + " - " + problem.getClass().getSimpleName() + " : " + problem.getResult());
         }
 
