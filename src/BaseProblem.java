@@ -1,4 +1,4 @@
-public class BaseProblem {
+public abstract class BaseProblem {
     private int problemNumber;
     private String result;
 
@@ -25,4 +25,5 @@ public class BaseProblem {
     public void setResult(String result) {
         this.result = result;
     }
+
 }
