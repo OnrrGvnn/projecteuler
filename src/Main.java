@@ -17,6 +17,7 @@ public class Main {
         solveProblem(new EvenFibonacciNumbers(), problems);
         solveProblem(new LargestPrimeFactor(), problems);
         solveProblem(new LargestPalindromeProduct(), problems);
+        solveProblem(new SmallestMultiple(), problems);
 
         System.out.println();
 
