@@ -22,29 +22,5 @@ public class LargestPrimeFactor extends BaseProblem implements BaseProblemIfc {
         }
 
         return String.valueOf(i);
-
-//        long number = 600851475143L;
-//        long highestPrimeNumber = 0L;
-//
-//        for (long i = number / 2; i > 1; i--) {
-//            if (number % i == 0) {
-//                if (isPrime(i)) {
-//                    highestPrimeNumber = i;
-//                    return String.valueOf(highestPrimeNumber);
-//                }
-//            }
-//        }
-//
-//        return String.valueOf(highestPrimeNumber);
-
     }
-
-//    public Boolean isPrime(long number) {
-//        for (long i = 2; i < number / 2; i++) {
-//            if (number % i == 0) {
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
 }

@@ -13,22 +13,20 @@ public class LargestPalindromeProduct extends BaseProblem implements BaseProblem
     public String solve() {
         int product;
         int maxPalindrome = 0;
-        int factor1 = 0;
-        int factor2 = 0;
 
-        for (int i = 100; i < 1000; i++) {
-            for (int j = 100; j < 1000; j++) {
+        for (int i = 999; i >= 100; i--) {
+            for (int j = i; j >= 100; j--) {
                 product = i * j;
 
-                if (isPalindrome(product) && product > maxPalindrome) {
+                if (product <= maxPalindrome) {
+                    break;
+                }
+
+                if (isPalindrome(product)) {
                     maxPalindrome = product;
-                    factor1 = i;
-                    factor2 = j;
                 }
             }
         }
-
-        //System.out.println(factor1 + " x " + factor2 + " = " + maxPalindrome);
 
         return String.valueOf(maxPalindrome);
     }
