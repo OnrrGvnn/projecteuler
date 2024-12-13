@@ -18,6 +18,7 @@ public class Main {
         solveProblem(new LargestPrimeFactor(), problems);
         solveProblem(new LargestPalindromeProduct(), problems);
         solveProblem(new SmallestMultiple(), problems);
+        solveProblem(new SumSquareDifference(), problems);
 
         System.out.println();
 
